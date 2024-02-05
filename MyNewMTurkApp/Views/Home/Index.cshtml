@@ -1,0 +1,51 @@
+﻿<!-- Views/Home/Index.cshtml -->
+@{
+    ViewData["Title"] = "Home";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('https://www.freeppt7.com/uploads/190919/1-1Z91922152VC.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .center h1 {
+            font-size: 3em;
+        }
+        .center button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>CatFlora</h1>
+        <button onclick="redirectToCreateHITForm()">Começar</button>
+        <button type="button" onclick="redirectToAnotherWebsite2()">Avaliar</button>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    <script>
+        function redirectToCreateHITForm() {
+            // Redirect to CreateHITForm action
+            window.location.href = '@Url.Action("CreateHITForm", "Home")';
+        }
+        function redirectToAnotherWebsite2() {
+            // Replace 'https://www.example.com' https://workersandbox.mturk.com/projects?filters%5Bsearch_term%5D=ambrosio&page_size=20&page_number=1&sort=num_hits_desc&filters%5Bmin_reward%5D=0  with the URL you want to redirect to
+            window.location.href = 'https://workersandbox.mturk.com/projects?filters%5Bsearch_term%5D=ambrosio&page_size=20&page_number=1&sort=num_hits_desc&filters%5Bmin_reward%5D=0';
+        }
+    </script>
+}

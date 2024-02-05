@@ -1,0 +1,127 @@
+<!-- wwwroot/CreateHITForm.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create HIT Form</title>
+</head>
+    <style>
+        body {
+            background-image: url('https://www.freeppt7.com/uploads/190919/1-1Z91922152VC.png');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        h1 {
+            font-size: 3em;
+            /* Adjust as needed */
+        }
+    
+        button {
+            margin: 10px;
+            /* Adjust as needed */
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin: 10px 0; /* Adjust as needed */
+        }
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        #message {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 20px; /* Adjust as needed */
+            max-width: 300px; /* Added this line */
+            border-radius: 25px; /* Added this line */
+            border: 2px solid black; /* Added this line */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center; /* Added this line */
+        }
+    </style>
+<body>
+    <h1>Submissão de Imagens</h1>
+    <button id="back-button" onclick="window.history.back();">Home</button>
+    <form id="hitForm" enctype="multipart/form-data">
+        <label for="name">Insira o seu Username:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="description">Insira uma descrição da Imagem:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="image">Imagem:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <button type="button" onclick="showMessage(); createHIT()">Submeter</button>
+        <button type="button" onclick="redirectToAnotherWebsite()" >Avaliar</button>
+    </form>
+        <div id="message">Imagem submetida!</div>
+    <script>
+        function showMessage() {
+                var message = document.getElementById('message');
+                message.style.display = 'block';
+                setTimeout(function () {
+                    message.style.display = 'none';
+                }, 2000); // Message will disappear after 3 seconds
+            }
+       async function createHIT() {
+            var name = document.getElementById('name').value;
+            var description = document.getElementById('description').value;
+            var image = document.getElementById('image').files[0];
+
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('description', description);
+            formData.append('image', image);
+
+            console.log('Name:', name);
+            console.log('Description:', description);
+            console.log('Image:', image);
+            
+             try {
+                // Use fetch API to make an asynchronous request to the server
+                const response = await fetch('/Home/CreateHIT', {
+                    method: 'POST',
+                    body: formData,
+                });
+            
+            if (response.ok) {
+                     // Assuming the server returns JSON with success message
+                     const result = await response.json();
+                     console.log(result.message);
+                 } else {
+                     console.error('Failed to create HIT. Server returned:', response.statusText);
+                 }
+             } catch (error) {
+                 console.error('An error occurred while creating HIT:', error);
+             }
+
+        }
+        function redirectToAnotherWebsite() {
+                // Replace 'https://www.example.com' https://workersandbox.mturk.com/projects?filters%5Bsearch_term%5D=ambrosio&page_size=20&page_number=1&sort=num_hits_desc&filters%5Bmin_reward%5D=0  with the URL you want to redirect to
+                window.location.href = 'https://workersandbox.mturk.com/projects?filters%5Bsearch_term%5D=ambrosio&page_size=20&page_number=1&sort=num_hits_desc&filters%5Bmin_reward%5D=0';
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MyNewMTurkApp.props" />
+</Project>

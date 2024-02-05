@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "i2WwaQz1iTJfD+ahYyp3lqEnalbOZ8uU1gEseNg/uXPEi0K03Or0OCo70Wlo6FCR9jZqGhVLSZOYIdG5TH2oMw==",
+  "success": true,
+  "projectFilePath": "F:\\Universidade\\Mestrado\\1 Ano\\1 Sem\\Crowdsourcing\\ProjectoMvc\\MyNewMTurkApp\\MyNewMTurkApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luisc\\.nuget\\packages\\awssdk.core\\3.7.302.4\\awssdk.core.3.7.302.4.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.300\\awssdk.extensions.netcore.setup.3.7.300.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\awssdk.mturk\\3.7.300.44\\awssdk.mturk.3.7.300.44.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\awssdk.s3\\3.7.305.20\\awssdk.s3.3.7.305.20.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\awssdk.transfer\\3.7.302.9\\awssdk.transfer.3.7.302.9.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.0.0\\microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\microsoft.extensions.primitives\\2.0.0\\microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\microsoft.openapi\\1.6.13\\microsoft.openapi.1.6.13.nupkg.sha512",
+    "C:\\Users\\luisc\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
